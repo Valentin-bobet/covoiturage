@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= title
+    p #{title}
+    ul
+        each item in res.lesOffrestoutes
+            li = item
