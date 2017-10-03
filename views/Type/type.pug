@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+    h1 = title
+    p Liste des types
+        ul
+            each letype in listeTypes
+                li= letype._libelle

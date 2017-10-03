@@ -8,7 +8,11 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var offres =require('./routes/offres');
+var lieux = require('./routes/lieux');
+var type = require('./routes/types');
 
+var modelLieu = require('./models/lieu');
+modelLieu.chargerLieux();
 var app = express();
 
 // view engine setup
@@ -24,8 +28,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/offres',offres)
-app.use('/users', users);
+app.use('/offres',offres);
+app.use('/users',users);
+app.use('/lieux',lieux);
+app.use('/types' ,type);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -7,9 +7,10 @@ exports.offre_ajout_post = function(req, res) {
 };
 
 exports.offre_List = function (req,res,next) {
-    res.render('offres',{title: 'Liste des offres',lesOffrestoutes:lesOffres});
+    res.render('offres',{title: 'Liste des offres',tousLesLieux:lesLieux});
 };
 
+/*
 const Lieu = require('../models/lieu');
 const Type = require('../models/type');
 
@@ -35,4 +36,4 @@ lesOffres.push(lesLieux[1],lesTypes[2]);
 lesOffres.push(lesLieux[2],lesTypes[1]);
 lesOffres.push(lesLieux[3],lesTypes[1]);
 lesOffres.push(lesLieux[4],lesTypes[1]);
-
+*/
